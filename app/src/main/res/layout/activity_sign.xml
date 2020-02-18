@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.sign">
+
+    <EditText
+        android:id="@+id/signid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/signpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/signrepassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="repassword"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그인" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/signbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="신규계정생성" />
+
+        <Button
+            android:id="@+id/guestloginbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="게스트로그인" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+</LinearLayout>
