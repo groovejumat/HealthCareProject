@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    dsgsdgsdg
-
     String strNickname, strProfile;
 
     @Override
