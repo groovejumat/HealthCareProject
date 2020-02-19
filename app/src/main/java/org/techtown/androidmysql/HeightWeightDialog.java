@@ -34,11 +34,11 @@ public class HeightWeightDialog extends Dialog {
 
         //셋팅
         mPositiveButton=(Button)findViewById(R.id.pbutton);
-        mNegativeButton=(Button)findViewById(R.id.nbutton);
+
 
         //클릭 리스너 셋팅 (클릭버튼이 동작하도록 만들어줌.)
         mPositiveButton.setOnClickListener(mPositiveListener);
-        mNegativeButton.setOnClickListener(mNegativeListener);
+
     }
 
     //생성자 생성

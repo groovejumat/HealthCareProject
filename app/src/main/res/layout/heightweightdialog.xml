@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:text="당신에게 맞는 운동을 추천해 드립니다."
+            android:text="언제나 헬스"
             android:textColor="#000000"
             android:textSize="20dp" />
 
@@ -29,6 +29,7 @@
 
 
         <EditText
+            android:id="@+id/height"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -36,11 +37,19 @@
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/weight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:hint="몸무게"
             android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/pbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:text="입력완료" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,18 +57,5 @@
         android:layout_height="wrap_content"
         android:weightSum="100">
 
-        <Button
-            android:id="@+id/pbutton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:text="확인" />
-
-        <Button
-            android:id="@+id/nbutton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:text="취소" />
     </LinearLayout>
 </LinearLayout>
