@@ -18,16 +18,22 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
 
-        <activity android:name=".Activity.KakaoLogin">
+        <activity android:name=".Activity.startpage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.login">
+
+
+        <activity android:name=".Activity.KakaoLogin">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
-        <activity android:name=".Activity.sign"></activity>
+        <activity android:name=".Activity.login"></activity>
+        <activity android:name=".Activity.sign" />
         <activity android:name=".MainActivity" />
     </application>
 
