@@ -22,7 +22,7 @@ public class GlobalApplication extends Application {
          * 필요한 상황에서만 override해서 사용하면 됨.
          *
          * @return Session의 설정값.
-         */
+         **/
         @Override
         public ISessionConfig getSessionConfig() {
             return new ISessionConfig() {
