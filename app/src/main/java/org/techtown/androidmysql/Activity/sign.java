@@ -22,7 +22,7 @@ import java.net.URL;
 
 public class sign extends AppCompatActivity {
 
-    //sdkfslakfjasldf
+    //커밋 테스트 주석
     //접속정보와 태그명 지정
     private static String IP_ADDRESS = "15.164.218.247";
     private static String TAG = "signtest";
