@@ -24,7 +24,10 @@ import org.techtown.androidmysql.R;
 public class KakaoLogin extends AppCompatActivity {
     private SessionCallback sessionCallback;
 
-    String test;
+    gewgweglwegjlwkjgewl
+    welgwlkgwlkg
+            weglwegjelkglkg
+    welkgjewlg
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
