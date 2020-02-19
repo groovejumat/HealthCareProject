@@ -29,6 +29,7 @@ public class login extends AppCompatActivity {
 
 
     //접속정보와 태그명 지정
+    //테스트
     private static String IP_ADDRESS = "15.164.218.247";
     private static String TAG = "logintest";
 
