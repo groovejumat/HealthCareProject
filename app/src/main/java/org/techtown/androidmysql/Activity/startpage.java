@@ -27,12 +27,14 @@ public class startpage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startpage);
 
-        //셰어드 프리퍼런스 객체 생성.
+        //셰어드 프리퍼런스 객체 생성. (몸무게와 키를 저장하는데에 사용)
         SharedPreferences sharedPreferences = getSharedPreferences("WeightHeight", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         //파라미터에 리스너 등록
         Handler handler = new Handler();
+
+        //엑티비티 생성 후 1.5초 뒤에 몸무게 키 입력 다이얼로그 생성.
         handler.postDelayed(new Runnable() {
             public void run() {
                 HeightWeightDialog = new HeightWeightDialog(startpage.this,positiveListener,negativeListener);
@@ -47,7 +49,7 @@ public class startpage extends AppCompatActivity {
         public void onClick(View v) {
 //            Toast.makeText(getApplicationContext(), "확인버튼이 눌렸습니다.",Toast.LENGTH_SHORT).show();
             //로그인 화면으로 페이지 전환
-            Intent intent= new Intent(startpage.this , login.class);
+            Intent intent= new Intent(startpage.this , KakaoLogin.class);
             startActivity(intent);
 
             HeightWeightDialog.dismiss();

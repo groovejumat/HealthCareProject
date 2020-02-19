@@ -21,12 +21,16 @@ import org.techtown.androidmysql.GlobalApplication;
 import org.techtown.androidmysql.MainActivity;
 import org.techtown.androidmysql.R;
 
+
+//카카오톡 로그인 페이지
 public class KakaoLogin extends AppCompatActivity {
+
     private SessionCallback sessionCallback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //해당 페이지로 로그인 페이지를 구현해야 하는가 싶음.
         setContentView(R.layout.activity_kakao_login);
 
         sessionCallback = new SessionCallback();
@@ -48,6 +52,7 @@ public class KakaoLogin extends AppCompatActivity {
         Session.getCurrentSession().removeCallback(sessionCallback);
     }
 
+    //세션 생성 처리(기존 로그인상태를 확인)
     private class SessionCallback implements ISessionCallback {
         @Override
         public void onSessionOpened() {
@@ -70,7 +75,10 @@ public class KakaoLogin extends AppCompatActivity {
                 }
 
                 @Override
+                //성공했을 때 MeV2Response 객체를 받아와서 그중 값을 선택해서 가지고 온다.
                 public void onSuccess(MeV2Response result) {
+
+                    //메인액티비티로 값 전송하기
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     intent.putExtra("name", result.getNickname());
                     intent.putExtra("profile", result.getProfileImagePath());
