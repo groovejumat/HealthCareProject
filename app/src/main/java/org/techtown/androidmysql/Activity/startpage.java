@@ -2,8 +2,10 @@ package org.techtown.androidmysql.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -30,16 +32,23 @@ public class startpage extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         //파라미터에 리스너 등록
-        HeightWeightDialog = new HeightWeightDialog(this,positiveListener,negativeListener);
-        HeightWeightDialog.show();
-
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                HeightWeightDialog = new HeightWeightDialog(startpage.this,positiveListener,negativeListener);
+                HeightWeightDialog.show();
+            }
+        }, 1500);  // 1500 milliseconds
     }
 
 
     //확인 리스너생성
     private View.OnClickListener positiveListener = new View.OnClickListener() {
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "확인버튼이 눌렸습니다.",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getApplicationContext(), "확인버튼이 눌렸습니다.",Toast.LENGTH_SHORT).show();
+            //로그인 화면으로 페이지 전환
+            Intent intent= new Intent(startpage.this , login.class);
+            startActivity(intent);
 
             HeightWeightDialog.dismiss();
         }
