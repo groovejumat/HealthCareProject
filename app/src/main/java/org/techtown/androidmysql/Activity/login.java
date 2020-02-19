@@ -28,6 +28,7 @@ import java.security.MessageDigest;
 public class login extends AppCompatActivity {
 
 
+    // 스웨인
 
     //접속정보와 태그명 지정
     private static String IP_ADDRESS = "15.164.218.247";
