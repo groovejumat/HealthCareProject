@@ -81,7 +81,8 @@ public class KakaoLogin extends AppCompatActivity {
                     //메인액티비티로 값 전송하기
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     intent.putExtra("name", result.getNickname());
-                    intent.putExtra("profile", result.getProfileImagePath());
+                    intent.putExtra("email", result.getKakaoAccount().getEmail());
+//                    intent.putExtra("profile2", result.getProfileImagePath());
                     startActivity(intent);
                     finish();
                 }

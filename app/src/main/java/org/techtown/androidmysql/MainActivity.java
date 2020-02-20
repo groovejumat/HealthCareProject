@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 
         Intent intent = getIntent();
         strNickname = intent.getStringExtra("name");
-        strProfile = intent.getStringExtra("profile");
+        strProfile = intent.getStringExtra("email");
 
         tvNickname.setText(strNickname);
         tvProfile.setText(strProfile);
