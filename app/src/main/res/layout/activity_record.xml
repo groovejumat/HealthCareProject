@@ -24,30 +24,37 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:background="#A2AAAAAA"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@mipmap/ic_launcher" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/ic_accessibility_black_24dp" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="총 운동 횟수" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/totalcount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
                     android:layout_weight="1"
-                    android:text="0회" />
+                    android:text="0회"
+                    android:textAlignment="textEnd"
+                    android:textSize="30dp" />
             </LinearLayout>
 
             <ImageView
@@ -57,100 +64,99 @@
                 android:scaleType="fitCenter"
                 android:adjustViewBounds="true"/>
 
-            <TextView
-                android:id="@+id/textview"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="15sp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="48dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="@drawable/watch_image"
+                    tools:layout_editor_absoluteX="158dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/totaltime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="총운동시간" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    app:srcCompat="@drawable/walk_image"
+                    tools:layout_editor_absoluteX="158dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/BMI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BMI" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    app:srcCompat="@drawable/today_image"
+                    tools:layout_editor_absoluteX="158dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/totaldate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="총 운동일" />
+                </LinearLayout>
+
+            </LinearLayout>
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:id="@+id/imageView11"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:srcCompat="@mipmap/ic_launcher"
-                        tools:layout_editor_absoluteX="158dp"
-                        tools:layout_editor_absoluteY="16dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView22"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:id="@+id/textView23"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:srcCompat="@mipmap/ic_launcher"
-                        tools:layout_editor_absoluteX="158dp"
-                        tools:layout_editor_absoluteY="16dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView19"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:id="@+id/textView20"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="43dp"
-                        android:layout_height="match_parent"
-                        app:srcCompat="@mipmap/ic_launcher"
-                        tools:layout_editor_absoluteX="158dp"
-                        tools:layout_editor_absoluteY="16dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textView19"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-
-                        <TextView
-                            android:id="@+id/textView20"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="TextView" />
-                    </LinearLayout>
-                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -162,7 +168,7 @@
                         android:id="@+id/imageView13"
                         android:layout_width="43dp"
                         android:layout_height="match_parent"
-                        app:srcCompat="@mipmap/ic_launcher"
+                        app:srcCompat="@drawable/chart"
                         tools:layout_editor_absoluteX="158dp"
                         tools:layout_editor_absoluteY="16dp" />
 
@@ -172,7 +178,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView19"
+                            android:id="@+id/workoutavg"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="TextView" />
@@ -181,7 +187,7 @@
                             android:id="@+id/textView20"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text="일주일 평균 운동 횟수" />
                     </LinearLayout>
 
                     <ImageView
@@ -189,7 +195,7 @@
                         android:layout_width="43dp"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="20dp"
-                        app:srcCompat="@mipmap/ic_launcher"
+                        app:srcCompat="@drawable/fitness_image"
                         tools:layout_editor_absoluteX="158dp"
                         tools:layout_editor_absoluteY="16dp" />
 
@@ -199,7 +205,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView19"
+                            android:id="@+id/totalkcal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="TextView" />
@@ -208,28 +214,30 @@
                             android:id="@+id/textView20"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="TextView" />
+                            android:text="총 예상 소모칼로리" />
                     </LinearLayout>
                 </TableRow>
 
             </TableLayout>
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/totaldate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:text="체중변화" />
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="250dp"
                 android:layout_margin="16dp" />
 
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
                 android:text="운동달력" />
 
             <com.prolificinteractive.materialcalendarview.MaterialCalendarView

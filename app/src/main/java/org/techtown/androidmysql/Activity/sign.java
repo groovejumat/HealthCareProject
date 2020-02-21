@@ -3,6 +3,7 @@ package org.techtown.androidmysql.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,8 +33,7 @@ public class sign extends AppCompatActivity {
     Button loginbutton,guestloginbutton,signbutton; //로그인, 게스트로그인, 회원가입 버튼
 
     //변수 객체 생성
-    String email,password,repassword; //아이디, 암호, 암호재입력 정보 String
-
+    String email,password,repassword,weight,height; //아이디, 암호, 암호재입력 정보 String
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,18 @@ public class sign extends AppCompatActivity {
         guestloginbutton=(Button)findViewById(R.id.guestloginbutton); //게스트 로그인 버튼
         signbutton=(Button)findViewById(R.id.signbutton); //회원가입 버튼
 
+        //셰어드 프리퍼런스로 가지고 온 정보.
+        SharedPreferences sharedPreferences;
+        SharedPreferences.Editor editor;
 
+        sharedPreferences = getSharedPreferences("WeightHeight", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        float sharedweight = sharedPreferences.getFloat("weight", 0);
+        float sharedhegiht = sharedPreferences.getFloat("height", 0);
+
+        weight = String.valueOf(sharedweight);
+        height = String.valueOf(sharedhegiht);
 
         signbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +71,7 @@ public class sign extends AppCompatActivity {
                 repassword = signrepassword.getText().toString(); //비밀번호재입력
 
                 sign.InsertData task = new sign.InsertData(); //AsynkTask를 이어 받는 InsertData를 실행한다.
-                task.execute("http://" + IP_ADDRESS + "/signaction.php",email,password,repassword); //생성된 task를 실행. 여기에서 String입력값들을 차례대로 넣어 준다. (주소,이름,국가)
+                task.execute("http://" + IP_ADDRESS + "/signaction.php",email,password,repassword,weight,height); //생성된 task를 실행. 여기에서 String입력값들을 차례대로 넣어 준다. (주소,이름,국가)
 
                 //버튼을 누를 때마다 기존 내용 초기화
                 signid.setText("");
@@ -105,10 +116,14 @@ public class sign extends AppCompatActivity {
             String repassword = (String)params[3];
             Log.d(TAG, "POST response  - " + repassword);
 
+            String weight = (String)params[4];
+
+            String height = (String)params[5];
+
             String serverURL = (String)params[0];
             Log.d(TAG, "POST response  - " + serverURL);
-            String postParameters = "email=" + email + "&password=" + password + "&repassword=" + repassword;
-
+            String postParameters = "email=" + email + "&password=" + password + "&repassword=" + repassword + "&weight=" + weight + "&height=" + height;
+            Log.d(TAG, "postParameters  - " + postParameters);
 
             try {
 

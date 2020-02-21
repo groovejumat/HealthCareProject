@@ -41,4 +41,5 @@ dependencies {
 
     //켈린더뷰 추가
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }
