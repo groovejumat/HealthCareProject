@@ -11,6 +11,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -33,6 +37,14 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
+    implementation 'com.google.android.material:material:1.0.0'
+
+    //차트 라이브러리
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+
     //카카오톡 SDK를 추가
     api group: 'com.kakao.sdk', name: 'usermgmt', version: '1.14.0'
+
+    //켈린더뷰 추가
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
 }

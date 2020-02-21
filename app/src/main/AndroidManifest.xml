@@ -13,26 +13,54 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.Program">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".Activity.getdata">
+            <!--             <intent-filter>-->
+            <!--             <action android:name="android.intent.action.MAIN" />-->
+            <!--             <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--             </intent-filter>-->
+        </activity>
+        <activity android:name=".numberpicker">
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.record">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
 
         <activity android:name=".Activity.startpage">
+<!--                        <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>-->
+        </activity>
+        <activity android:name=".Activity.KakaoLogin">
+<!--             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>-->
+        </activity>
+        <activity android:name=".Activity.login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".Activity.KakaoLogin">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-        <activity android:name=".Activity.login"></activity>
         <activity android:name=".Activity.sign" />
         <activity android:name=".MainActivity" />
     </application>
