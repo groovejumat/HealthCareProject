@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.Program">
+
+        </activity>
+
         <activity android:name=".Activity.getdata">
 <!--             <intent-filter>-->
 <!--             <action android:name="android.intent.action.MAIN" />-->
